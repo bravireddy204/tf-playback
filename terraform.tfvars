@@ -1,0 +1,5 @@
+cidr_block = "10.0.0.0/16"
+vpc_name = "my_vpc_16122004"
+instance_name = "my_instance"
+instance_type = "t3.micro"
+bucket_name = "mybucket25122024"
