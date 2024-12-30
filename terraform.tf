@@ -3,8 +3,8 @@ terraform {
      bucket = "my-bucktes-19-12-2024"
      key    = "terraform_states_playback"
      region = "us-east-1"
-     dynamodb_table = "tfstate-locking"
-     encrypt = true
+   #  dynamodb_table = "tfstate-locking"
+   #  encrypt = true
    }
   required_providers {
     aws = {
