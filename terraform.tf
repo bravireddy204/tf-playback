@@ -2,7 +2,7 @@ terraform {
    backend "s3" {
      bucket = "my-bucktes-19-12-2024"
      key    = "terraform_states_playback"
-     region = "ap-south-1"
+     region = "us-east-1"
      dynamodb_table = "tfstate-locking"
      encrypt = true
    }
