@@ -18,14 +18,12 @@ jobs:
           use-installer: true
           token: ${{ secrets.GIT_TOKEN }}
       - name: configure aws credentials
-        uses: aws-actions/configure-aws-credentials@v2
+        uses: aws-actions/configure-aws-credentials@v4
         with:
-          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          role-to-assume: arn:aws:iam::985539789378:role/Oidc-admin
           aws-region: ap-south-1
-      - name: test aws login
-        run: | 
-          aws sts get-caller-identity
+          run: | 
+           aws sts get-caller-identity
       - name: initialize, format and plan
         run: |
           terraform init
