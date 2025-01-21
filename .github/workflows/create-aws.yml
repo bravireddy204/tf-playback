@@ -20,7 +20,7 @@ jobs:
       - name: configure aws credentials
         uses: aws-actions/configure-aws-credentials@v4
         with:
-          role-to-assume: arn:aws:iam::985539789378:role/Oidc-admin
+          role-to-assume: ${{ secrets.AWS_ROLE_ARN }}
           aws-region: ap-south-1
           run: | 
            aws sts get-caller-identity
